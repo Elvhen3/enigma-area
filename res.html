@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Réservation Escape Game</title>
+    <link rel="stylesheet" href="res.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Book your Escape Game</h1>
+        <form id="reservation-form">
+            <label for="name">Name :</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email :</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="players">Number of Players :</label>
+            <input type="number" id="players" name="players" required min="1">
+
+            <button type="submit">Book</button>
+        </form>
+        <p id="confirmation-message" class="hidden">Your reservation has been confirmed!</p>
+        <button id="home-button" class="hidden" onclick="window.location.href='index.html'">Back home</button>
+    </div>
+
+    <script>
+        document.getElementById('reservation-form').addEventListener('submit', function(event) {
+            event.preventDefault();
+            document.getElementById('confirmation-message').classList.remove('hidden');
+            document.getElementById('home-button').classList.remove('hidden');
+        });
+    </script>
+</body>
+</html>

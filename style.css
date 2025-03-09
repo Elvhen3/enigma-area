@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    overflow-x: hidden;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background: url('ff.jpg') no-repeat center center/cover;
+    background-size: cover;
+    background-attachment: fixed;
+    object-fit: cover;
+    color: white;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+}
+.title{
+    position: absolute;
+    padding-left: 20px;
+}
+header .logo img {
+    height: 100px;
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+header nav ul li {
+    margin: 0 50px;
+    font-size: 1.5rem;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+header nav ul li a:hover {
+    text-decoration: underline solid blue;
+    
+}
+
+/* Hero Section */
+#accueil {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+#accueil-img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+.hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+.hero-slogan {
+    font-size: 1.5rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+/* Best Sellers Section */
+#best-sellers {
+    padding: 50px 0;
+}
+
+.bestseller-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.bestseller-item {
+    text-align: center;
+}
+
+.bestseller-item img {
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+    width: 200px;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+}
+
+.bestseller-item img:hover {
+    transform: scale(1.1);
+}
+
+.bestseller-item p {
+    margin-top: 10px;
+    font-size: 1.2em;
+}
+
+/* Choose Your Adventure Section */
+#choix {
+    padding: 50px 0;
+}
+
+.options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.option {
+    position: relative;
+    width: 300px;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.5);
+    cursor: pointer;
+}
+
+.option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.option:hover img {
+    transform: scale(1.1);
+}
+
+.description {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 0px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.option:hover .description {
+    opacity: 1;
+}
+
+/* Footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+
+
+
+#adventure-options {
+    padding: 50px 0;
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement */
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.game-options-container {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments verticalement dans chaque carte */
+    align-items: center; /* Centre les éléments dans chaque carte */
+    gap: 40px;
+    padding: 5%;
+}
+
+.game-option {
+    position: relative;
+    width: 450px; /* Augmenter la taille des images */
+    height: 350px; /* Augmenter la taille des images */
+    overflow: hidden;
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: 0 0 20px rgba(0, 0, 255, 0.8); /* Contour bleu néon plus visible */
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-option img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.game-option:hover img {
+    transform: scale(1.1); /* Effet de zoom à l'hover */
+}
+
+/* Style de la description avec fond noir semi-transparent et contour bleu néon */
+.game-option-text {
+    background-color: rgba(0, 0, 0, 0.5); /* Fond noir avec opacité */
+    color: white;
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    margin-top: -2px; /* Place la description juste sous l'image */
+    border: 4px solid rgba(0, 0, 255, 0.5); /* Contour bleu néon */
+}
+
+/* Option pour centrer les éléments de texte (titre et description) dans les cartes */
+.game-option-text h3 {
+    margin: 0;
+    font-size: 1.6rem;
+}
+
+.game-option-text h4 {
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+
+.title{
+    position: relative;
+    padding-top: 250px;
+}
+
+.bx{
+    font-size: 3rem;
+}
